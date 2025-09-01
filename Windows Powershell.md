@@ -2,7 +2,6 @@
 PowerShell is object-oriented. Its commands are known as cmdlets (command-lets) they follow a Verb-Noun naming convention meaning the `Verb` describes the action and the `Noun` specifies the object on which the action is performed. For example:
 `Get-Content`: retrieves (gets) the content of a file and displays in the console
 `Set-Location`: changes (sets) the current working directory
-
 ## Basic Cmdlets
 `Get-Command`: returns all available cmdlets, functions, aliases and scripts that can be executed in the current PowerShell session, with command-type, name, version and source.
 Its possible to filter the list of commands based on displayed property values, for example:
