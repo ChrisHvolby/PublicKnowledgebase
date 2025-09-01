@@ -3,11 +3,7 @@
 Thumbs.db
 
 # Obsidian state files
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/plugins/obsidian-git/data.json
-.obsidian/plugins/*/data.json
-.obsidian/cache
+.obsidian/
 .trash/
 
 # Temp / backups
