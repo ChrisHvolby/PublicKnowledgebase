@@ -1,0 +1,14 @@
+# OS trash
+.DS_Store
+Thumbs.db
+
+# Obsidian state files
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/obsidian-git/data.json
+.obsidian/plugins/*/data.json
+.obsidian/cache
+.trash/
+
+# Temp / backups
+*.log
