@@ -27,91 +27,15 @@ Similar to `dir` in the cmdprompt or `ls` in unix.like systems, `Get-ChildItem` 
 Again we need to specify the `-Path` property, so the command to navigate to .\Documents would be: `Set-Location -Path ".\Documents"`
 
 To create a new item in PowerShell, we can use the `New-Item` command. This is similar to the `mkdir` command in cmdprompt, but its much more capable and general, as it can create any "item". The `mkdir` lookalike-command would be:
-`New-Item -Path ".\captain-cabin\captain-wardrobe" -ItemType "Directory"`
+`New-Item -Path ".\universe\alternateUniverse" -ItemType "Directory"`
 And if we wanted to make a file:
-`New-Item -Path ".\captain-cabin\captain-wardrobe\captain-boots.txt -ItemType "File"` 
+`New-Item -Path ".\universe\alternateUniverse\myUniverse.txt" -ItemType "File"` 
 
 Similarly if we want to remove an item, we use `Remove-Item`, this can both act like the `rmdir` and `del` command. 
-`Remove-Item -Path ".\captain-cabin\captain-wardrobe\captain-boots.txt"`
-`Remove-Item -Path ".\captain-cabin\captain-wardrobe"`
-
-
-
-
+`Remove-Item -Path ".\universe\alternateUniverse\myUniverse.txt"`
+`Remove-Item -Path ".\universe\alternateUniverse"`
 ## Network in PowerShell
-Test network connection:
+Test network connection to verify reachability:
 `Test-NetConnection -ComputerName [ip] -port [port]`
 `Test-NetConnection -ComputerName 192.168.1.145`
 `Test-NetConnection -ComputerName 192.168.1.145 -Port 3080`
-# Windows CMD
-## SSH Remote Connection to CMD (SSH)
-Secure network-protocol, offering encrypted connection to remote pc’s offering administration capabilities, typically used to connect/log into a remote computer's shell or command-line interface (CLI). 
-Syntax: >`ssh [username]@[IP]`
-"Confirm prompt" >`yes`
-"Enter password" >`[password]`
-
----
-
-## CMD Basics
-- Show path: `set`
-- OS version: `ver`
-- System info: `systeminfo`  
-  - Page by page: `systeminfo | more`
-- Help: `[command] -h` or `[command] /?`
-
----
-
-## CMD Networking
-- Show IP config:  
-  - `ipconfig`  
-  - `ipconfig /all`
-- Ping: `ping [target]`
-- Trace route: `tracert [target]`
-- Lookup host/domain:  
-  - `nslookup example.com`
-  - `nslookup example.com 1.1.1.1`
-- Connections and ports: `netstat`  
-  - Options:  
-    - `-a` (all)  
-    - `-b` (show programs)  
-    - `-o` (show PID)  
-    - `-n` (numerical)  
-  - Example: `netstat -abon`
-
----
-
-## CMD File & Disk Management
-- Change dir: `cd [dir]`
-- Go up one level: `cd ..`
-- List dir: `dir`  
-  - `dir /a` (hidden/system)  
-  - `dir /s` (recursive)
-- Tree view: `tree`
-- Create dir: `mkdir [name]`
-- Delete dir: `rmdir [name]`
-- Show file contents: `type file.txt | more`
-- Copy file: `copy test.txt test2.txt`
-- Move file: `move file.txt C:\target`
-- Delete file: `del file.txt` or `erase file.txt`
-- Wildcard: `copy *.md C:\Markdown`
-
----
-
-## CMD Tasks & Processes
-- List processes: `tasklist`
-- Filter by image: `tasklist /FI "imagename eq sshd.exe"`
-- Kill by PID: `taskkill /PID 4567`
-
----
-
-## CMD Common Useful Commands
-- Check disk: `chkdsk`
-- List drivers: `driverquery`
-- Scan/repair system files: `sfc /scannow`
-
----
-
-## Shutdown
-- Shutdown: `shutdown /s`
-- Restart: `shutdown /r`
-- Abort: `shutdown /a`
